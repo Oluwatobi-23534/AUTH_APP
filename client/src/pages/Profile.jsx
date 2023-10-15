@@ -62,7 +62,7 @@ export default function Profile() {
         request.resource.contentType.matches('image/.*') */}
         <img
           className="h-24 w-24 self-center cursor-pointer rounded-full object-cover mt-2"
-          src={currentUser.profilePicture}
+          src={formData.profilePicture || currentUser.profilePicture}
           alt="profile-picture"
           onClick={() => fileRef.current.click()}
         />
